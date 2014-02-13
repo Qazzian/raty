@@ -55,6 +55,16 @@ padding:7px
 </nav><div class="clearfix"></div>
 
 <article><div class="body">
+<h1>reversed</h1>
+
+<p>
+  This is Qazzian's custom version. It has the stars starting on the right. Also corrects the look of the scores to the user.
+  The main problem with this version, atm, is that the score comes back the inverse of what is presented to the user.
+</p>
+
+<div id="reversed"></div>
+
+
     <h1>Default</h1>
 
 <p>You need just to have a <code>div</code> to build the Raty.</p>
@@ -494,9 +504,9 @@ The arguments is the same of the <a href="#mouseover">mouseover</a> callback.</p
 
   <div class="body">
     <header><a href="javascript:void(0);">Lanamaja</a>
-      
-      
-      
+
+
+
     </header><p>Hi,<br>
 how can i add this on a wordpress page? and/or include into a contact form?<br>
 If i want the plugin to open up different links or display messages depending on the number of stars the user clicked, how could i manage this<br>
@@ -506,8 +516,8 @@ with your plugin?</p>
 
 
     <footer><a href="#comment-654" class="anchor" title="Link to this comment">#654</a>
-      
-      
+
+
     </footer>
 </div>
 
@@ -519,9 +529,9 @@ with your plugin?</p>
 
   <div class="body">
     <header><a href="http://wbotelhos.com" target="_blank">Washington Botelho</a>
-      
+
       <span class="flag author">author</span>
-      
+
     </header><p>Lanamaja,</p>
 
 <p>You will use the same code. But where put it, I can't help you, because I don't know about wordpress coding.</p>
@@ -530,8 +540,8 @@ with your plugin?</p>
 
 
     <footer><a href="#comment-659" class="anchor" title="Link to this comment">#659</a>
-      
-      
+
+
     </footer>
 </div>
 
@@ -546,17 +556,17 @@ with your plugin?</p>
 
   <div class="body">
     <header><a href="javascript:void(0);">Amarpreet</a>
-      
-      
-      
+
+
+
     </header><p>Hi,</p>
 
 <p>Could you help me with how i can post the rating using ajax.       </p>
 
 
     <footer><a href="#comment-652" class="anchor" title="Link to this comment">#652</a>
-      
-      
+
+
     </footer>
 </div>
 
@@ -568,9 +578,9 @@ with your plugin?</p>
 
   <div class="body">
     <header><a href="http://wbotelhos.com" target="_blank">Washington Botelho</a>
-      
+
       <span class="flag author">author</span>
-      
+
     </header><p>Amarpreet,</p>
 
 <p>You can do it from inside the <a href="#click">click</a> callback.<br>
@@ -580,8 +590,8 @@ Get the <a href="#score">score</a> value and manipulate it with jQuery.</p>
 
 
     <footer><a href="#comment-653" class="anchor" title="Link to this comment">#653</a>
-      
-      
+
+
     </footer>
 </div>
 
@@ -596,15 +606,15 @@ Get the <a href="#score">score</a> value and manipulate it with jQuery.</p>
 
   <div class="body">
     <header><a href="http://wbotelhos.com" target="_blank">Washington Botelho</a>
-      
-      
-      
+
+
+
     </header><p>first</p>
 
 
     <footer><a href="#comment-650" class="anchor" title="Link to this comment">#650</a>
-      
-      
+
+
     </footer>
 </div>
 
@@ -626,6 +636,18 @@ Get the <a href="#score">score</a> value and manipulate it with jQuery.</p>
   $.fn.raty.defaults.path = 'lib/images';
 
   $(function() {
+
+
+    $('#reversed').raty({
+        hints: [5, '4+', '3+', '2+', '1+'],
+        click: function(score){
+          alert('Score: ' + score);
+        },
+        imgStyles: {
+          float: 'right'
+        }
+      });
+
     $('#default').raty();
 
 $('#score').raty({ score: 3 });
