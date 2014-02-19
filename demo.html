@@ -639,12 +639,15 @@ Get the <a href="#score">score</a> value and manipulate it with jQuery.</p>
 
 
     $('#reversed').raty({
+        start: 5,
+        stop: 1,
+        rtol: true,
         hints: [5, '4+', '3+', '2+', '1+'],
         click: function(score){
           alert('Score: ' + score);
         },
         imgStyles: {
-          float: 'right'
+          float: 'left'
         }
       });
 
