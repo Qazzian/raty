@@ -1151,7 +1151,7 @@ describe('Raty', function() {
 
         expect(cancel).toHaveClass('raty-cancel');
         expect(cancel).toHaveAttr('title', 'Cancel this rating!');
-        expect(cancel).toHaveAttr('alt', 'x');
+        expect(cancel).toHaveAttr('data-score', 'x');
         expect(cancel).toHaveAttr('src', 'cancel-off.png');
       });
     });
@@ -1169,7 +1169,7 @@ describe('Raty', function() {
 
         expect(cancel).toHaveClass('raty-cancel');
         expect(cancel).toHaveAttr('title', 'Cancel this rating!');
-        expect(cancel).toHaveAttr('alt', 'x');
+        expect(cancel).toHaveAttr('data-score', 'x');
         expect(cancel).toHaveAttr('src', 'cancel-off.png');
       });
 
